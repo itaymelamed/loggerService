@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="3" result="Failed" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0" engine-version="3.7.0.0" clr-version="4.0.30319.42000" start-time="2017-10-28 17:56:40Z" end-time="2017-10-28 17:57:42Z" duration="62.185983">
+  <command-line><![CDATA[/Users/itaymelamed/Desktop/automation/packages/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe --params=testRunId=12 /Users/itaymelamed/Desktop/automation/Automation/bin/Debug/Automation.dll]]></command-line>
+  <test-suite type="Assembly" id="0-1008" name="Automation.dll" fullname="/Users/itaymelamed/Desktop/automation/Automation/bin/Debug/Automation.dll" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.174729" total="3" passed="0" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.8.1.0" clr-version="4.0.30319.42000" os-version="Unix 17.0.0.0" platform="Unix" cwd="/Users/itaymelamed/Desktop/Logger/Public" machine-name="h-MBP-sl-Itay" user="itaymelamed" user-domain="h-MBP-sl-Itay" culture="en-US" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="/Users/itaymelamed/Desktop/Logger/Public" />
+      <setting name="TestParametersDictionary" value="[testRunId, 12]">
+        <item key="testRunId" value="12" />
+      </setting>
+      <setting name="TestParameters" value="testRunId=12" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="4" />
+    </settings>
+    <properties>
+      <property name="LevelOfParallelism" value="30" />
+      <property name="_PID" value="1014" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1009" name="Automation" fullname="Automation" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.160525" total="3" passed="0" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="0-1010" name="TestsFolder" fullname="Automation.TestsFolder" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.160103" total="3" passed="0" failed="3" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestFixture" id="0-1004" name="Paa+Test2Class" fullname="Automation.TestsFolder.Paa+Test2Class" classname="Automation.TestsFolder.Paa+Test2Class" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.155067" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <properties>
+            <property name="ParallelScope" value="Self" />
+          </properties>
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="0-1005" name="TwelveUpSanityTest" fullname="Automation.TestsFolder.Paa+Test2Class.TwelveUpSanityTest" methodname="TwelveUpSanityTest" classname="Automation.TestsFolder.Paa+Test2Class" runstate="Runnable" seed="1951641389" result="Failed" label="Error" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.138316" asserts="0">
+            <properties>
+              <property name="TestCaseId" value="2" />
+            </properties>
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverException : Unexpected error. System.Net.WebException: The request timed out
+  at System.Net.HttpWebRequest.GetRequestStream () [0x0004d] in <ead0603699f14fb4bc97df2618539636>:0 
+  at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest (OpenQA.Selenium.Remote.HttpCommandExecutor+HttpRequestInfo requestInfo) [0x00087] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute (OpenQA.Selenium.Remote.Command commandToExecute) [0x00033] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver.Execute (System.String driverCommandToExecute, System.Collections.Generic.Dictionary`2[TKey,TValue] parameters) [0x00014] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+              <stack-trace><![CDATA[  at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError (OpenQA.Selenium.Remote.Response errorResponse) [0x00201] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver.Execute (System.String driverCommandToExecute, System.Collections.Generic.Dictionary`2[TKey,TValue] parameters) [0x0003d] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession (OpenQA.Selenium.ICapabilities desiredCapabilities) [0x00065] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (OpenQA.Selenium.Remote.ICommandExecutor commandExecutor, OpenQA.Selenium.ICapabilities desiredCapabilities) [0x0001e] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (System.Uri remoteAddress, OpenQA.Selenium.ICapabilities desiredCapabilities, System.TimeSpan commandTimeout) [0x00008] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (System.Uri remoteAddress, OpenQA.Selenium.ICapabilities desiredCapabilities) [0x00000] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at Automation.BrowserFolder.Browser..ctor () [0x00037] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at Automation.TestsFolder.Base.InitTest () [0x000bd] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <ac812cae460544af83bd6cf54c5eee87>:0 
+--TearDown
+  at Automation.TestsFolder.Base.CleanTest () [0x00051] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <ac812cae460544af83bd6cf54c5eee87>:0 ]]></stack-trace>
+            </failure>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1002" name="Paa+Test1Class" fullname="Automation.TestsFolder.Paa+Test1Class" classname="Automation.TestsFolder.Paa+Test1Class" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.155233" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <properties>
+            <property name="ParallelScope" value="Self" />
+          </properties>
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="0-1003" name="NinetyMinutesSanity" fullname="Automation.TestsFolder.Paa+Test1Class.NinetyMinutesSanity" methodname="NinetyMinutesSanity" classname="Automation.TestsFolder.Paa+Test1Class" runstate="Runnable" seed="1807859850" result="Failed" label="Error" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.138298" asserts="0">
+            <properties>
+              <property name="TestCaseId" value="1" />
+            </properties>
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverException : Unexpected error. System.Net.WebException: The request timed out
+  at System.Net.HttpWebRequest.GetRequestStream () [0x0004d] in <ead0603699f14fb4bc97df2618539636>:0 
+  at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest (OpenQA.Selenium.Remote.HttpCommandExecutor+HttpRequestInfo requestInfo) [0x00087] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute (OpenQA.Selenium.Remote.Command commandToExecute) [0x00033] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver.Execute (System.String driverCommandToExecute, System.Collections.Generic.Dictionary`2[TKey,TValue] parameters) [0x00014] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+              <stack-trace><![CDATA[  at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError (OpenQA.Selenium.Remote.Response errorResponse) [0x00201] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver.Execute (System.String driverCommandToExecute, System.Collections.Generic.Dictionary`2[TKey,TValue] parameters) [0x0003d] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession (OpenQA.Selenium.ICapabilities desiredCapabilities) [0x00065] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (OpenQA.Selenium.Remote.ICommandExecutor commandExecutor, OpenQA.Selenium.ICapabilities desiredCapabilities) [0x0001e] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (System.Uri remoteAddress, OpenQA.Selenium.ICapabilities desiredCapabilities, System.TimeSpan commandTimeout) [0x00008] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (System.Uri remoteAddress, OpenQA.Selenium.ICapabilities desiredCapabilities) [0x00000] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at Automation.BrowserFolder.Browser..ctor () [0x00037] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at Automation.TestsFolder.Base.InitTest () [0x000bd] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <ac812cae460544af83bd6cf54c5eee87>:0 
+--TearDown
+  at Automation.TestsFolder.Base.CleanTest () [0x00051] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <ac812cae460544af83bd6cf54c5eee87>:0 ]]></stack-trace>
+            </failure>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1006" name="Paa+Test3Class" fullname="Automation.TestsFolder.Paa+Test3Class" classname="Automation.TestsFolder.Paa+Test3Class" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.155167" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <properties>
+            <property name="ParallelScope" value="Self" />
+          </properties>
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="0-1007" name="NinetyMinutes_DeSanity" fullname="Automation.TestsFolder.Paa+Test3Class.NinetyMinutes_DeSanity" methodname="NinetyMinutes_DeSanity" classname="Automation.TestsFolder.Paa+Test3Class" runstate="Runnable" seed="925901231" result="Failed" label="Error" start-time="2017-10-28 17:56:41Z" end-time="2017-10-28 17:57:42Z" duration="61.138261" asserts="0">
+            <properties>
+              <property name="TestCaseId" value="3" />
+            </properties>
+            <failure>
+              <message><![CDATA[OpenQA.Selenium.WebDriverException : The HTTP request to the remote WebDriver server for URL http://localhost:4444/wd/hub/session timed out after 60 seconds.
+  ----> System.Net.WebException : The request timed out
+TearDown : System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+              <stack-trace><![CDATA[  at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest (OpenQA.Selenium.Remote.HttpCommandExecutor+HttpRequestInfo requestInfo) [0x00113] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute (OpenQA.Selenium.Remote.Command commandToExecute) [0x00033] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver.Execute (System.String driverCommandToExecute, System.Collections.Generic.Dictionary`2[TKey,TValue] parameters) [0x00014] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession (OpenQA.Selenium.ICapabilities desiredCapabilities) [0x00065] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (OpenQA.Selenium.Remote.ICommandExecutor commandExecutor, OpenQA.Selenium.ICapabilities desiredCapabilities) [0x0001e] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (System.Uri remoteAddress, OpenQA.Selenium.ICapabilities desiredCapabilities, System.TimeSpan commandTimeout) [0x00008] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at OpenQA.Selenium.Remote.RemoteWebDriver..ctor (System.Uri remoteAddress, OpenQA.Selenium.ICapabilities desiredCapabilities) [0x00000] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+  at Automation.BrowserFolder.Browser..ctor () [0x00037] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at Automation.TestsFolder.Base.InitTest () [0x000bd] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <ac812cae460544af83bd6cf54c5eee87>:0 
+--WebException
+  at System.Net.HttpWebRequest.EndGetResponse (System.IAsyncResult asyncResult) [0x00049] in <ead0603699f14fb4bc97df2618539636>:0 
+  at System.Net.HttpWebRequest.GetResponse () [0x0000e] in <ead0603699f14fb4bc97df2618539636>:0 
+  at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest (OpenQA.Selenium.Remote.HttpCommandExecutor+HttpRequestInfo requestInfo) [0x000a7] in <7950d498ce174251b11d87eb3ce8b97f>:0 
+--TearDown
+  at Automation.TestsFolder.Base.CleanTest () [0x00051] in <9918c723abde4d1da8035e8b465f7414>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <ac812cae460544af83bd6cf54c5eee87>:0 ]]></stack-trace>
+            </failure>
+          </test-case>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1000" name="Base" fullname="Automation.TestsFolder.Base" classname="Automation.TestsFolder.Base" runstate="Runnable" testcasecount="0" result="Passed" start-time="2017-10-28 17:57:42Z" end-time="2017-10-28 17:57:42Z" duration="0.000042" total="0" passed="0" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0" />
+        <test-suite type="TestFixture" id="0-1001" name="Paa" fullname="Automation.TestsFolder.Paa" classname="Automation.TestsFolder.Paa" runstate="Runnable" testcasecount="0" result="Passed" start-time="2017-10-28 17:57:42Z" end-time="2017-10-28 17:57:42Z" duration="0.000014" total="0" passed="0" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="0" />
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

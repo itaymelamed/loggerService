@@ -1,0 +1,178 @@
+body {
+    background: #88968D;
+    font-family: 'Raleway', sans-serif;
+}
+#maintitle {
+    font-size: 80px;
+    text-align: center;
+    color: black;
+    padding-bottom: 20px;
+}
+.testrunsids {
+    transition: width 2s;
+    display: inline-block;
+    color: white;
+    background: #4B4C4E;
+    width: 174px;
+    height: 290px;
+    padding: 10px;
+    animation-duration: 2s;
+    animation-name: slidein;
+    border-radius: 6px;
+    font-family: 'Fjalla One', sans-serif;
+}
+@keyframes slidein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+    background: black;
+}
+#showresults{
+    margin-left: 100px;
+}
+.testrunsids {
+    margin-left: 20px;
+}
+.details {
+    font-size:16px;
+    margin: 15px;
+}
+.passed{
+    color: greenyellow;
+}
+.failed{
+    color: red;
+}
+.running{
+    color: 	#00FFFF;
+}
+.waiting{
+    color: yellow;
+}
+.btn{
+    margin-left: 28%;
+    margin-right: 50%;
+    background: black;
+    width:100px;
+    height: 21px;
+    text-align: center;
+    border-radius: 6px;
+}
+#failedtest:hover{
+    color:black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background: grey;
+    cursor: pointer;
+}
+#show-container{
+    color: white;
+    margin-left: 120px;
+    margin-right: 170px;
+    background:#4B4C4E;
+    width: 406px;
+    border-radius: 6px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+.table{
+    width: 100%;
+    animation-duration: 2s;
+    animation-name: slidein;
+    margin-top:14px;
+}
+.showTitle{
+    font-size: 20px;
+
+}
+.showdetail{
+    width: 600px;
+    height: 35px;
+}
+#passedtitle{
+    color: greenyellow;
+    margin-top:10px;
+}
+
+#failedtitle{
+    color:red;
+}
+
+#runningtitle{
+    color: #00FFFF;
+}
+
+#waitingtitle{
+    color: yellow;
+}
+
+#testrunidtitle{
+    font-size: 20px;
+    background: black;
+    border-radius: 6px;
+    padding-left: 14px;
+}
+#helper{
+    background: #4B4C4E;
+    border-radius: 6px;
+}
+#show{
+    animation-name: slidein;
+    animation-duration: 2s;
+    width: 44%;
+    float: left;
+}
+#testdetails-container{
+    background:#4B4C4E;
+    color: white;
+    border-radius: 6px;
+    width: 621px;
+    animation-name: slidein;
+    animation-duration: 2s;
+}
+#testdetails-title{
+    background: black;
+    border-radius: 6px;
+    font-size: 26px;
+}
+.testdetails-detail{
+    border-radius: 6px;
+    padding: 10px;
+}
+#titlehelper{
+    font-size: 20px;
+}
+#testdetails{
+    margin-left:548px;
+}
+#section2{
+    margin-top:30px;
+}
+#helper{
+    padding-left:15px;
+    padding-top:2px;
+    padding-bottom: 10px;
+}
+#scrennshot{
+    padding-bottom: 10px;
+    padding-left:18%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.step {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
