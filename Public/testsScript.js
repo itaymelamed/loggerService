@@ -133,6 +133,21 @@ function RenderResults(id, siteName){
     });
   }
 
+function GetTestRunStatus(results) {
+  if(results.SentToHub == 0 && results.Running == 0) {
+    return "Completed"
+  }
+  else {
+    return "Running"
+  }
+}
+
+function CalculateSucRate(results, status){
+  let sum = results.Passed + results.Failed + results.SentToHub + results.Running;
+  let sucRate = (status / sum)*100;
+  return sucRate;
+}
+
 function RenderTestRuns(){
   GetTestsRuns().then(data => {
     var idCompo = data.reverse().slice(0, 5).map(test => {
@@ -143,8 +158,9 @@ function RenderTestRuns(){
           <div className="env details">Env: {test.Env}</div>
           <div className="date details">Date: {test.Date}</div>
           <div className="durations details">Duration: {test.Duration}</div>
-          <div className="passed details">Passed: {test.Results.Passed}</div>
-          <div className="failed details">Failed: {test.Results.Failed}</div>
+          <div className="details">Status: {GetTestRunStatus(test.Results)}</div>          
+          <div className="passed details">Passed: {test.Results.Passed} ({CalculateSucRate(test.Results, test.Results.Passed)}%)</div>
+          <div className="failed details">Failed: {test.Results.Failed} ({CalculateSucRate(test.Results, test.Results.Failed)}%)</div>
           <div className="running details">Runing: {test.Results.Running}</div>
           <div className="waiting details">Waiting: {test.Results.SentToHub}</div>
           <div className="btn"><a onClick={() => RenderResults(test.TestRunId, test.SiteName)}>Show Results</a></div>
