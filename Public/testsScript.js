@@ -154,10 +154,9 @@ function RenderTestRuns(){
       return (
         <div id="testrun1" className="testrunsids">
           <div className="title">{test.SiteName}</div>
-          <div className="details">ID: {test.TestRunId}</div>
           <div className="env details">Env: {test.Env}</div>
           <div className="date details">Date: {test.Date}</div>
-          <div className="durations details">Duration: {test.Duration}</div>
+          <div className="durations details">Duration: {test.Duration} Minutes</div>
           <div className="details">Status: {GetTestRunStatus(test.Results)}</div>          
           <div className="passed details">Passed: {test.Results.Passed} ({CalculateSucRate(test.Results, test.Results.Passed)}%)</div>
           <div className="failed details">Failed: {test.Results.Failed} ({CalculateSucRate(test.Results, test.Results.Failed)}%)</div>
