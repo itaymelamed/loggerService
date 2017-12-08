@@ -1,0 +1,1 @@
+mono /Users/itaymelamed/Desktop/automation/packages/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe --params=testRunId=$1 --params=env=$2 --params=siteName=$3  /Users/itaymelamed/Desktop/automation/Automation/bin/Debug/Automation.dll

@@ -1,5 +1,5 @@
 body {
-    background: #88968D;
+    background: white;
     font-family: 'Raleway', sans-serif;
 }
 #maintitle {
@@ -12,9 +12,9 @@ body {
     transition: width 2s;
     display: inline-block;
     color: white;
-    background: #4B4C4E;
+    background: #6f7072;
     width: 174px;
-    height: 290px;
+    height: 352px;
     padding: 10px;
     animation-duration: 2s;
     animation-name: slidein;
@@ -30,6 +30,7 @@ body {
         opacity: 1;
     }
 }
+
 .title {
     text-align: center;
     margin-bottom: 10px;
@@ -70,18 +71,23 @@ body {
 #failedtest:hover{
     color:black;
     cursor: pointer;
-    font-weight: bold;
+}
+
+#passedtest:hover{
+    color:black;
+    cursor: pointer;
 }
 
 .btn:hover{
     background: grey;
     cursor: pointer;
 }
+
 #show-container{
     color: white;
     margin-left: 120px;
     margin-right: 170px;
-    background:#4B4C4E;
+    background:#6f7072;
     width: 406px;
     border-radius: 6px;
     animation-duration: 2s;
@@ -125,7 +131,7 @@ body {
     padding-left: 14px;
 }
 #helper{
-    background: #4B4C4E;
+    background: #6f7072;
     border-radius: 6px;
 }
 #show{
@@ -135,7 +141,7 @@ body {
     float: left;
 }
 #testdetails-container{
-    background:#4B4C4E;
+    background:#6f7072;
     color: white;
     border-radius: 6px;
     width: 621px;
@@ -170,9 +176,75 @@ body {
     padding-left:18%;
     margin-top:10px;
     margin-bottom:10px;
+    padding-right: 18%;
 }
 
 .step {
     padding-bottom: 5px;
     padding-top: 5px;
+}
+
+#vi {
+    color: greenyellow;
+}
+
+#x {
+    color: red;
+}
+
+.runTable{
+    background: #6f7072;
+    margin-left: 455px;
+    margin-right: 455px;
+    margin-bottom: 36px;
+    font-family: 'Fjalla One', sans-serif;  
+    color: white;
+    padding: 7px;
+    border-radius: 6px;
+    animation-duration: 2s;
+}
+
+#runTable-title {
+    background: black;
+    color: white;
+    padding: 0px 5px;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 25px;
+    height: 29px;;
+}
+
+#runContent {
+    margin: 10px;
+}
+
+.runBtn {
+    background: black;
+    width: 8px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.runBtn:hover {
+    background: grey;
+    cursor: pointer;  
+}
+
+.suit {
+    margin: 20px 0;
+}
+
+#TUp {
+    margin-right: 7px;
+}
+
+#all {
+    margin-right: 4px;
+}
+
+#executeTests-container {
+    animation-name: slidein;
+    animation-duration: 2s; 
 }

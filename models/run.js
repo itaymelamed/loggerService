@@ -12,7 +12,9 @@ const RunScheme = new Schema({
     TestRunId: String,
     Env: String,
     Date: String,
-    Results: ResultsScheme
+    Results: ResultsScheme,
+    Duration: String,
+    SiteName: String
 });
 
 module.exports = RunScheme

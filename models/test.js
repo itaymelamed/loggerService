@@ -16,7 +16,7 @@ const TestSchema = new Schema({
     Result: ResultSchema,
     TestRunId: String,
     Date: String,
-    EnvironmentType: String
+    EnvironmentType: String,
 });
 
 module.exports = TestSchema
