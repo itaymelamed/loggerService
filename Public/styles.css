@@ -14,7 +14,7 @@ body {
     color: white;
     background: #6f7072;
     width: 174px;
-    height: 382px;
+    height: 350px;
     padding: 10px;
     animation-duration: 2s;
     animation-name: slidein;
@@ -39,6 +39,7 @@ body {
 }
 #showresults{
     margin-left: 100px;
+    padding-top: 0;
 }
 .testrunsids {
     margin-left: 20px;
@@ -137,7 +138,7 @@ body {
 #show{
     animation-name: slidein;
     animation-duration: 2s;
-    width: 44%;
+    width: 30%;
     float: left;
 }
 #testdetails-container{
@@ -159,6 +160,7 @@ body {
 }
 #titlehelper{
     font-size: 20px;
+    margin-left: 10px;
 }
 #testdetails{
     margin-left:548px;
