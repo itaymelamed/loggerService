@@ -38,7 +38,7 @@ body {
     background: black;
 }
 #showresults{
-    margin-left: 100px;
+    margin-left: 283px;
     padding-top: 0;
 }
 .testrunsids {
@@ -86,10 +86,10 @@ body {
 
 #show-container{
     color: white;
-    margin-left: 120px;
+    margin-left: 305px;
     margin-right: 170px;
     background:#6f7072;
-    width: 406px;
+    width: 620px;
     border-radius: 6px;
     animation-duration: 2s;
     animation-name: slidein;
@@ -163,7 +163,7 @@ body {
     margin-left: 10px;
 }
 #testdetails{
-    margin-left:548px;
+    margin-left:943px;;
 }
 #section2{
     margin-top:30px;

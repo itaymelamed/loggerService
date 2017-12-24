@@ -1,11 +1,11 @@
 var intervaliD = -2;
 
 function  GetTestsRuns(){
-  return fetch('http://localhost:4000/api/testsRunsIds').then(res => res.json());
+  return fetch('http://34.210.172.180/:4000/api/testsRunsIds').then(res => res.json());
 }
 
 function GetResults(testRunId){
-  return fetch('http://localhost:4000/api/tests?id=' + testRunId).then(res => res.json());
+  return fetch('http://34.210.172.180/4000/api/tests?id=' + testRunId).then(res => res.json());
 }
 
 function ShowTest(testNumber, testRunId, testName){
@@ -145,7 +145,7 @@ function GetTestRunStatus(results) {
 function CalculateSucRate(results, status){
   let sum = results.Passed + results.Failed + results.SentToHub + results.Running;
   let sucRate = (status / sum)*100;
-  return sucRate;
+  return Math.floor(sucRate);
 }
 
 function DurationController(testResults)
@@ -158,7 +158,7 @@ function DurationController(testResults)
 
 function RenderTestRuns(){
   GetTestsRuns().then(data => {
-    var idCompo = data.reverse().slice(0, 5).map(test => {
+    var idCompo = data.reverse().slice(0, 6).map(test => {
       return (
         <div id="testrun1" className="testrunsids">
           <div className="title">{test.SiteName}</div>
