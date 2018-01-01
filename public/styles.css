@@ -38,7 +38,7 @@ body {
     background: black;
 }
 #showresults{
-    margin-left: 283px;
+    margin-left: 100px;
     padding-top: 0;
 }
 .testrunsids {
@@ -86,10 +86,10 @@ body {
 
 #show-container{
     color: white;
-    margin-left: 305px;
+    margin-left: 120px;
     margin-right: 170px;
     background:#6f7072;
-    width: 620px;
+    width: 84%;
     border-radius: 6px;
     animation-duration: 2s;
     animation-name: slidein;
@@ -138,14 +138,14 @@ body {
 #show{
     animation-name: slidein;
     animation-duration: 2s;
-    width: 30%;
+    width: 52%;;
     float: left;
 }
 #testdetails-container{
     background:#6f7072;
     color: white;
     border-radius: 6px;
-    width: 621px;
+    width: 90%;
     animation-name: slidein;
     animation-duration: 2s;
 }
@@ -163,7 +163,7 @@ body {
     margin-left: 10px;
 }
 #testdetails{
-    margin-left:943px;;
+    margin-left:51%;;
 }
 #section2{
     margin-top:30px;

@@ -1,11 +1,11 @@
 var intervaliD = -2;
 
 function  GetTestsRuns(){
-  return fetch('http://34.210.172.180/:4000/api/testsRunsIds').then(res => res.json());
+  return fetch('https://automation-center.minutemediaservices.com/api/testsRunsIds').then(res => res.json());
 }
 
 function GetResults(testRunId){
-  return fetch('http://34.210.172.180/4000/api/tests?id=' + testRunId).then(res => res.json());
+  return fetch('https://automation-center.minutemediaservices.com/api/tests?id=' + testRunId).then(res => res.json());
 }
 
 function ShowTest(testNumber, testRunId, testName){
@@ -14,8 +14,8 @@ function ShowTest(testNumber, testRunId, testName){
     var testSteps = json.filter(x => x.TestNumber == testNumber).map(x => x.Steps);
     var testStat = testResults[0].Status == "Failed";
     if (testStat){
-      var lastStep = testSteps[0][testSteps[0].length-2];      
-      testSteps[0] = testSteps[0].slice(0, testSteps[0].length-2);    
+      var lastStep = testSteps[0][testSteps[0].length-1];      
+      testSteps[0] = testSteps[0].slice(0, testSteps[0].length-1);    
     }
 
     var steps = testSteps[0].map((s,i) => {
@@ -145,7 +145,7 @@ function GetTestRunStatus(results) {
 function CalculateSucRate(results, status){
   let sum = results.Passed + results.Failed + results.SentToHub + results.Running;
   let sucRate = (status / sum)*100;
-  return Math.floor(sucRate);
+  return Math.round(sucRate);
 }
 
 function DurationController(testResults)
@@ -158,13 +158,13 @@ function DurationController(testResults)
 
 function RenderTestRuns(){
   GetTestsRuns().then(data => {
-    var idCompo = data.reverse().slice(0, 6).map(test => {
+    var idCompo = data.reverse().slice(0, 8).map(test => {
       return (
         <div id="testrun1" className="testrunsids">
           <div className="title">{test.SiteName}</div>
           <div className="env details">Env: {test.Env}</div>
           <div className="date details">Date: {test.Date.slice(3,14)}</div>
-          <div className="durations details">Duration: {DurationController(test)}</div>
+          
           <div className="details">Status: {GetTestRunStatus(test.Results)}</div>          
           <div className="passed details">Passed: {test.Results.Passed} ({CalculateSucRate(test.Results, test.Results.Passed)}%)</div>
           <div className="failed details">Failed: {test.Results.Failed} ({CalculateSucRate(test.Results, test.Results.Failed)}%)</div>
