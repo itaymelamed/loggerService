@@ -1,0 +1,33 @@
+version: '3.3'
+networks:
+  private:
+    driver: overlay
+services:
+  hub:
+    image: selenium/hub:3.8.1-chlorine
+    ports:
+      - "4444:4444"
+    deploy:
+     mode: global
+     placement:
+       constraints:
+         - node.role == manager
+    networks:
+     - private
+
+  chrome:
+    image: selenium/node-chrome:3.8.1-chlorine
+    volumes:
+      - /dev/urandom:/dev/random
+    depends_on:
+      - hub
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    entrypoint: bash -c 'SE_OPTS="-host $$HOSTNAME -port 5556" /opt/bin/entry_point.sh'
+    ports:
+      - "5556:5556"
+    deploy:
+      replicas: 1
+    networks:
+      - private
