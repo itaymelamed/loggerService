@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 // connect to mongodb
-mongoose.connect('mongodb://ec2-34-210-172-180.us-west-2.compute.amazonaws.com/TestRuns', {useMongoClient : true});
+mongoose.connect('mongodb://mongo/TestRuns', {useMongoClient : true});
 mongoose.Promise = global.Promise;
 
 //set up static files
