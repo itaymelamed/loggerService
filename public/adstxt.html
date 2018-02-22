@@ -1,0 +1,45 @@
+<html>
+<title></title>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div id="maintitle">Automation Center</div>
+   <!-- <div id="executeTests-container">
+        <div class="runTable">
+            <div id="runTable-title">Run Tests</div>
+            <div id="runContent">
+                <div class="suit"><span id="all">Run All</span><span class="runBtn" onclick="RunTests('UTest', 'all')"> UTest</span><span class="runBtn"> QA</span><span class="runBtn" onclick="RunTests()"> Production</span><div id="loading"></div></div>                    
+                <div class="suit"><span id="NMin">90Min.com - Sanity</span><span class="runBtn"  onclick="RunTests('UTest', '90Min')"> UTest</span><span class="runBtn"> QA</span><span class="runBtn"> Production</span></div>
+                <div class="suit"><span id="TUp">12Up.com  -  Sanity    </span><span class="runBtn" onclick="RunTests('UTest' ,'TwelveUp')"> UTest</span><span class="runBtn"> QA</span><span class="runBtn"> Production</span></div>
+                <div class="suit"><span id="NMinde">90Min.de  -  Sanity    </span><span class="runBtn" onclick="RunTests('UTest' ,'90MinDe')"> UTest</span><span class="runBtn"> QA</span><span class="runBtn"> Production</span></div>                           
+            </div>
+        </div>
+    </div> !-->
+    <div id="run-container"><span><div id="runs"></div></span></div>
+    <div id="testresults"></div>
+    <div id="section2">
+        <div id="show" class="secondcontainer"></div>
+        <div id="testdetails" class="secondcontainer"></div>
+    </div>
+    <canvas id="demo"></canvas>    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="adsTxtScripts.js"></script>
+    <script crossorigin src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+</body>
+<script>
+    function RunTests(env, siteName) {
+        if(siteName != "all") {
+            var win = window.open('http://localhost:8080/job/'+ siteName +'/build?token=test',"name", "width=200,height=100");
+        }
+        else {
+            fetch("http://localhost:3000/test");
+        }
+    }
+</script>
+</html>
