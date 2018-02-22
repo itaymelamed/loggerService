@@ -21,9 +21,8 @@ router.get('/tests', function(req, res, next){
 
 router.get('/adsTxt', function(req, res, next){
     const RunModel = mongoose.model('Run', RunsSchema, `Runs`);
-    RunModel.find({}).then(function(runs){
-        var tests = runs.filter(run => run.Category == "AdsTxt");
-        res.send(tests.map(test => test));
+    RunModel.find({Cartegory : "AdsTxt"}).then(function(runs){
+        res.send(runs.map(run => run));
     });
 });
 
