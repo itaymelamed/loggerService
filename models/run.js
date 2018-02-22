@@ -15,7 +15,7 @@ const RunScheme = new Schema({
     Results: ResultsScheme,
     Duration: String,
     SiteName: String,
-    Cartegory: String
+    Category: String
 });
 
 module.exports = RunScheme
