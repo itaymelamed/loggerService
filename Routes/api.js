@@ -26,4 +26,11 @@ router.get('/adsTxt', function(req, res, next){
     });
 });
 
+router.get('/adsTxtTestRun', function(req, res, next){
+    const RunModel = mongoose.model('Run', RunsSchema, `Runs`);
+    RunModel.find({Category : "AdsTxt"}).then(function(runs){
+        res.send(runs[0].TestRunId);
+    });
+});
+
 module.exports = router;
