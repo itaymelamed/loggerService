@@ -5,7 +5,7 @@ ENTRYPOINT ["/sbin/tini", "--"]
 COPY package.json .
  
 FROM base AS release
-COPY --from=dependencies /root/chat/prod_node_modules ./node_modules
+COPY --from=dependencies /root/chat ./chat
 COPY . .
 EXPOSE 5000
 CMD ps
