@@ -6,7 +6,7 @@ ENTRYPOINT ["/sbin/tini", "--"]
 COPY package.json .
  
 FROM base AS release
-COPY --from=dependencies /root/chat ./chat
+COPY --from=dependencies /root/chat .
 COPY . .
 RUN ls
 RUN apk update
