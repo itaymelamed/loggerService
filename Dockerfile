@@ -1,17 +1,15 @@
-FROM node:carbon
-
-# Create app directory
-WORKDIR /usr/src/app2
-
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-
+FROM alpine:3.5 AS base
+RUN apk add --no-cache nodejs-current tini
+WORKDIR /root/chat
+ENTRYPOINT ["/sbin/tini", "--"]
+COPY package.json .
+ 
+FROM base AS dependencies
+RUN npm set progress=false && npm config set depth 0
 RUN npm install
-
-# Bundle app source
+ 
+FROM base AS release
+COPY --from=dependencies /root/chat/prod_node_modules ./node_modules
 COPY . .
-
-EXPOSE 4000
-CMD [ "node", "index.js" ]
+EXPOSE 5000
+CMD npm run start
