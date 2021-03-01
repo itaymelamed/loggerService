@@ -7,7 +7,6 @@ COPY package.json .
  
 FROM base AS release
 COPY --from=base /root/chat .
-COPY . .
 RUN ls
 RUN apk update
 EXPOSE 5000
